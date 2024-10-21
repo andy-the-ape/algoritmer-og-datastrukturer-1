@@ -3,13 +3,6 @@ package PortfolioExercise;
 import java.util.*;
 
 public class Exercise4 {
-    public static void main(String[] args) {
-        System.out.println(Arrays.toString(findThreeNumbers(
-                new int[]{23,56,22,11,65,89,3,44,87,910,45,35,98}
-        )));
-    }
-
-    public static int[] findThreeNumbers(int[] inputArray) {
     /*
     Skriv en algoritme, der har et array af usorterede, entydige naturlige tal som input og find de tre tal i
     arrayet, hvis sum er tættest på en potens af 2. Det samme tal kan må bruges én gang.
@@ -17,8 +10,15 @@ public class Exercise4 {
     potens af to (fx 512).
     Kaldt med arrayet {23,56,22,11,65,89,3,44,87,910,45,35,98}, returneres de tre tal 89, 3, 35 og potensen af
     2: 128.
-     */
+    */
 
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(findThreeNumbers(
+                new int[]{23,56,22,11,65,89,3,44,87,910,45,35,98}
+        )));
+    }
+
+    public static int[] findThreeNumbers(int[] inputArray) {
         //The same number can only be used once, so we purge all duplicates of the inputArray:
         LinkedHashSet<Integer> uniqueNumbersSet = new LinkedHashSet<>();
         for (int i : inputArray) {

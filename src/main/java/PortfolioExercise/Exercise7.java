@@ -30,8 +30,8 @@ public class Exercise7 {
         int[] solutionPair = new int[2];
 
         outerLoop:
-        for (int X = 3; X <= Z; X++) {
-            for (int Y = 3; Y <= Z; Y++) {
+        for (int X = 3; X <= Math.sqrt(Z); X++) {
+            for (int Y = 3; Y <= Math.sqrt(Z); Y++) {
                 if (Math.pow(X, Y) > Z) {
                     break;
                 } else if (Math.pow(X, Y) == Z) {
